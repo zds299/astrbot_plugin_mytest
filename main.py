@@ -26,7 +26,7 @@ class MyPlugin(Star):
                 if file.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp')):
                     image_files.append(os.path.join(image_folder, file))
         selected_image = random.choice(image_files)
-        yield event.plain_result(f"Hello, {user_name}, 你发了 {message_str}!")
+        yield event.plain_result(f"这是你随机到的今日P站top50中的一张, {user_name}") #你发了 {message_str}
         yield event.image_result(selected_image) 
 
     async def terminate(self):
